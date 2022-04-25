@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E09DAF92812C12B00B324ED /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E09DAF82812C12B00B324ED /* Logger.swift */; };
+		6E09DAFB2816EEF200B324ED /* AnalyticCotrollerLogged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E09DAFA2816EEF200B324ED /* AnalyticCotrollerLogged.swift */; };
 		6ED7724D280D518300F08A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED7724C280D518300F08A2C /* AppDelegate.swift */; };
 		6ED7724F280D518300F08A2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED7724E280D518300F08A2C /* SceneDelegate.swift */; };
 		6ED77251280D518300F08A2C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED77250280D518300F08A2C /* FirstViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E09DAF82812C12B00B324ED /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		6E09DAFA2816EEF200B324ED /* AnalyticCotrollerLogged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticCotrollerLogged.swift; sourceTree = "<group>"; };
 		6ED77249280D518300F08A2C /* second-task--view-lifecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "second-task--view-lifecycle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED7724C280D518300F08A2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ED7724E280D518300F08A2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,10 +68,12 @@
 			isa = PBXGroup;
 			children = (
 				6ED77260280D563A00F08A2C /* AnalyticCotroller.swift */,
+				6E09DAFA2816EEF200B324ED /* AnalyticCotrollerLogged.swift */,
 				6ED7724C280D518300F08A2C /* AppDelegate.swift */,
 				6ED7724E280D518300F08A2C /* SceneDelegate.swift */,
 				6ED77250280D518300F08A2C /* FirstViewController.swift */,
 				6ED77262280D56A100F08A2C /* SecondViewController.swift */,
+				6E09DAF82812C12B00B324ED /* Logger.swift */,
 				6ED77252280D518300F08A2C /* Main.storyboard */,
 				6ED77255280D518500F08A2C /* Assets.xcassets */,
 				6ED77257280D518500F08A2C /* LaunchScreen.storyboard */,
@@ -203,6 +209,8 @@
 				6ED77251280D518300F08A2C /* FirstViewController.swift in Sources */,
 				6ED77261280D563A00F08A2C /* AnalyticCotroller.swift in Sources */,
 				6ED7724D280D518300F08A2C /* AppDelegate.swift in Sources */,
+				6E09DAF92812C12B00B324ED /* Logger.swift in Sources */,
+				6E09DAFB2816EEF200B324ED /* AnalyticCotrollerLogged.swift in Sources */,
 				6ED77263280D56A100F08A2C /* SecondViewController.swift in Sources */,
 				6ED7724F280D518300F08A2C /* SceneDelegate.swift in Sources */,
 			);

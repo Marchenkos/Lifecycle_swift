@@ -1,6 +1,6 @@
 import UIKit
 
- class AnalyticCotroller: UIViewController {
+ class AnalyticCotrollerLogged: UIViewController {
     var screenName: String?
     var startTime: Date = Date()
     var duration: Int = 0
@@ -20,19 +20,22 @@ import UIKit
 
         return formatter.string(from: date)
     }
+ }
 
+extension AnalyticCotrollerLogged {
+    var logger: Logger { Logger() }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.startTime = Date()
     }
-
+    
     override func viewDidDisappear(_ animated: Bool) {
-        duration = Int(Date().timeIntervalSince(startTime))
-        print("Screen \(screenName ?? Constants.undefinedScreenName) disapeared... duration: \(duration)sec")
+        logger.logOnViewDidDisappear(startTime: startTime, screenName: screenName)
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        print("Screen \(screenName ?? Constants.undefinedScreenName) apeared. StartTime: \(formatDate(date: startTime))")
+        logger.logOnViewDidAppear(screenName: screenName)
     }
- }
+}
