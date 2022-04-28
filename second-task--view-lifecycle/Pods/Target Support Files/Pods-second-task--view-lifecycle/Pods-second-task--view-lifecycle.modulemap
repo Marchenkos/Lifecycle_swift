@@ -1,0 +1,6 @@
+framework module Pods_second_task__view_lifecycle {
+  umbrella header "Pods-second-task--view-lifecycle-umbrella.h"
+
+  export *
+  module * { export * }
+}
