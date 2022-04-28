@@ -1,6 +1,6 @@
 import UIKit
 
-class FirstViewController: ViewControllerLifecycleLogger {
+class FirstViewController: AnalyticController {
     private enum Constants {
         static let screenName = "FirstViewController"
     }

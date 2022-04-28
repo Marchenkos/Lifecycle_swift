@@ -1,9 +1,7 @@
 import UIKit
 
  class AnalyticController: UIViewController {
-    var screenName: String?
-    var startTime: Date = Date()
-    var duration: Int = 0
+    let lifecycleLogger = ViewControllerLifecycleLogger()
 
     private enum Constants {
         static let dateFormat = "MM-dd-yyyy HH:mm:ss"
@@ -11,7 +9,7 @@ import UIKit
     }
 
     func setScreenName(screenName: String) {
-        self.screenName = screenName
+        lifecycleLogger.screenName = screenName
     }
 
     func formatDate(date: Date) -> String {
@@ -21,18 +19,15 @@ import UIKit
         return formatter.string(from: date)
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.startTime = Date()
-    }
-
     override func viewDidDisappear(_ animated: Bool) {
-        duration = Int(Date().timeIntervalSince(startTime))
-        print("Screen \(screenName ?? Constants.undefinedScreenName) disapeared... duration: \(duration)sec")
+        let duration = Int(Date().timeIntervalSince(lifecycleLogger.appearTime))
+
+        print("Screen \(lifecycleLogger.screenName ?? Constants.undefinedScreenName) disapeared... duration: \(duration)sec")
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        print("Screen \(screenName ?? Constants.undefinedScreenName) apeared. Appear time: \(formatDate(date: Date()))")
+        lifecycleLogger.appearTime = Date()
+
+        print("Screen \(lifecycleLogger.screenName ?? Constants.undefinedScreenName) apeared. Appear time: \(formatDate(date: lifecycleLogger.appearTime))")
     }
  }
