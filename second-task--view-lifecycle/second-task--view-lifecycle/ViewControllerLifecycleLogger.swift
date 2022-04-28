@@ -5,7 +5,7 @@ import UIKit
     var appearTime: Date = Date()
     var duration: Int = 0
 
-    private enum Constants {
+    enum Constants {
         static let dateFormat = "MM-dd-yyyy HH:mm:ss"
         static let undefinedScreenName = "undefinedScreenName"
     }

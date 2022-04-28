@@ -2,7 +2,7 @@ excluded:
   - Pods
 
 line_length:
-  warning: 200
+  warning: 220
   error: 250
 
 disabled_rules: 
