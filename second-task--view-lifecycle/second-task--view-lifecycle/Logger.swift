@@ -14,12 +14,13 @@ class Logger {
         return formatter.string(from: date)
     }
     
-    func logOnViewDidDisappear(startTime: Date, screenName: String?) {
-        let duration = Int(Date().timeIntervalSince(startTime))
+    func logOnViewDidDisappear(appearTime: Date, screenName: String?) {
+        let duration = Int(Date().timeIntervalSince(appearTime))
+
         print("Screen \(screenName ?? Constants.undefinedScreenName) disapeared... duration: \(duration)sec")
     }
     
-    func logOnViewDidAppear(screenName: String?) {
-        print("Screen \(screenName ?? Constants.undefinedScreenName) apeared. StartTime: \(formatDate(date: Date()))")
+    func logOnViewDidAppear(appearTime: Date, screenName: String?) {
+        print("Screen \(screenName ?? Constants.undefinedScreenName) apeared. Appear time: \(formatDate(date: appearTime))")
     }
 }

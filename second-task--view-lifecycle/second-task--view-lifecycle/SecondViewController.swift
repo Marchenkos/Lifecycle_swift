@@ -1,6 +1,6 @@
 import UIKit
 
-class SecondViewController: AnalyticCotrollerLogged {
+class SecondViewController: ViewControllerLifecycleLogger {
     private enum Constants {
         static let screenName = "SecondViewController"
     }
@@ -8,6 +8,6 @@ class SecondViewController: AnalyticCotrollerLogged {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.setScreenName(screenName: Constants.screenName)
+        setScreenName(screenName: Constants.screenName)
     }
 }

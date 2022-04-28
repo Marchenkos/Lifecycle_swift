@@ -1,8 +1,8 @@
 import UIKit
 
- class AnalyticCotroller: UIViewController {
+ class ViewControllerLifecycleLogger: UIViewController {
     var screenName: String?
-    var startTime: Date = Date()
+    var appearTime: Date = Date()
     var duration: Int = 0
 
     private enum Constants {
@@ -20,19 +20,17 @@ import UIKit
 
         return formatter.string(from: date)
     }
+ }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.startTime = Date()
-    }
-
+extension ViewControllerLifecycleLogger {
+    var logger: Logger { Logger() }
+    
     override func viewDidDisappear(_ animated: Bool) {
-        duration = Int(Date().timeIntervalSince(startTime))
-        print("Screen \(screenName ?? Constants.undefinedScreenName) disapeared... duration: \(duration)sec")
+        logger.logOnViewDidDisappear(appearTime: appearTime, screenName: screenName)
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        print("Screen \(screenName ?? Constants.undefinedScreenName) apeared. StartTime: \(formatDate(date: startTime))")
+        appearTime = Date()
+        logger.logOnViewDidAppear(appearTime: appearTime, screenName: screenName)
     }
- }
+}
